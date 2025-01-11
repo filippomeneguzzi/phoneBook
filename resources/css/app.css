@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary-bg: #E3F2FD;
+    --secondary-bg: #FFFFFF;
+    --primary-text: #1A237E;
+    --secondary-text: #5C6BC0;
+    --accent: #2196F3;
+    --divider: #BBDEFB;
+    --search-bg: #FFFFFF;
+    --avatar-bg:#90CAF9;
+}
+
+.darkMode{
+    --primary-bg: #FFF3E0;
+    --secondary-bg: #FFFFFF;
+    --primary-text: #BF360C;
+    --secondary-text: #F4511E;
+    --accent: #FF5722;
+    --divider: #FFE0B2;
+    --search-bg: #FFFFFF;
+    --avatar-bg:#FFB74D;
+}
+
+body{
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    margin-top: 10vh;
+}
+
+/* navbar */
+
+nav{
+    position: fixed;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    background-color: var(--primary-bg);
+}
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--avatar-bg);
+}
+nav svg{
+    fill: var(--accent);
+}
+#switch-mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--avatar-bg);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+#switch-mode svg:last-child{
+    display: none;
+}
+.darkMode #switch-mode svg:first-child{
+    display: none;
+}
+.darkMode #switch-mode svg:last-child{
+    display: block;
+}
+
+/* index view */
+.content{
+    margin-top: 10vh;
+}
+.homeBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 40px;
+    background-color: var(--primary-bg);
+}
+.searchNavigationBox{
+    display: flex;
+    /* position: fixed; */
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid var(--divider);
+}
+#searchBox{
+    width: 100%;
+}
+#searchBox input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--primary-text);
+    border-radius: 50px;
+    padding: 10px;
+    background-color: var(--search-bg);
+    color: var(--primary-text);
+}
+#searchBox input::placeholder {
+    color: var(--secondary-text);
+}
+.createContactBox{
+    margin-top: 20px;
+}
+.createContactBox a{
+    color: var(--accent);
+    font-size: 2.2rem;
+}
+.contactList{
+    width: 80%;
+    height: auto;
+}
+.contactName{
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.contactName div{
+    border-bottom: 1px solid var(--divider);
+    padding: 10px 0;
+}
+
+
+/* create and edit view */
+.createBox,.editBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: var(--primary-bg);
+}
+.titleCreate, .editTitle{
+    margin-bottom: 50px;
+    color: var(--primary-text);
+}
+#createForm,#editForm{
+    height: auto;
+    width: 80%;
+}
+#createForm input, #editForm input{
+    background-color: transparent;
+    color: var(--primary-text) !important;
+    padding: 3px 10px;
+    border: none;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 10px;
+}
+#createForm input::placeholder, #editForm input::placeholder{
+    color: var(--secondary-text);
+}
+.nameZone{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.emailZone input{
+    width: 100%;
+}
+.phoneZone input{
+    width: 100%;
+}
+.buttonCreate{
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-evenly;
+}
+.standardBtn{
+    background-color: var(--accent);
+    color: var(--search-bg);
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.backBtn{
+    background-color: var(--accent);
+    color: var(--secondary-bg);
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* show view */
+.contactShowBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: var(--primary-bg);
+}
+.btnSpace{
+    display: flex;
+    width: 80%;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+.firstLetter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height:200px;
+    font-size: 60px;
+    font-weight: 900;
+    border-radius: 50%;
+    background-color: var(--avatar-bg);
+}
+.dataShow{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 60%;
+    gap: 20px;
+}
+.deleteForm{
+    margin-top: 50px;
+}
+.deleteForm button{
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--secondary-text);
+    color: var(--search-bg);
+    box-shadow: 2px 2px 5px var(--accent);
+}
+
+
+

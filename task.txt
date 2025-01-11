@@ -1,0 +1,18 @@
+- Configurare il progetto con db
+- Installare i pacchetti
+
+
+-Route
+-Models
+-Controllers
+    - fare per ricerca
+    - delete
+    - index
+    - create
+    - edit
+-Views
+    - index
+    - show contact
+    - edit contact
+    - create contact
+
